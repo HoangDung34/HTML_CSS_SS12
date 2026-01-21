@@ -1,0 +1,115 @@
+/* Reset CSS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+    background: linear-gradient(-90deg, #06defd, #0b5ed7);
+    display: flex;
+    height: 64px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header h1{
+    color: white;
+    font-weight: bold;
+}
+
+.header .search{
+    width: 400px;
+    height: 32px;
+}
+
+.header .search input{
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+
+.header .search input::placeholder{
+    color: rgb(15, 15, 83);
+    padding-left: 5px;
+}
+
+.header nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    margin: 10px;
+}
+
+.header .menu{
+    display: none;
+}
+
+main{
+    background-color: #f4f7fc;
+    padding: 0px 100px 0px 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+main .hero{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    margin: 30px;
+    border: 1px solid #dbdbdb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.008);
+    border-radius: 12px;
+}
+
+main .hero .progress progress{
+    height: 10px;
+    width: 180px;
+    -webkit-appearance: none;
+}
+
+main .hero .progress progress::-webkit-progress-value{
+    background-color: rgb(13, 110, 253);
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .header{
+        justify-content: space-between;
+        padding: 15px;
+    }
+    .header .search{
+        display: none;
+    }
+    .header nav {
+        display: none;
+    }
+    .header .menu{
+        display: block;
+        color: white;
+        font-size: 28.8px;
+    }
+
+    /* Main */
+    main{
+        padding: 0 20px 0 20px;
+    }
+    main .hero{
+        flex-direction: column;
+        margin: 20px;
+        align-items: center;
+        text-align: center;
+    }
+}
